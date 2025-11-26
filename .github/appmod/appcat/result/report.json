@@ -1,0 +1,792 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2025-11-26T08:58:54.931774932Z",
+    "analysisEndTime": "2025-11-26T09:00:28.46604505Z",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks",
+      "azure-appservice",
+      "azure-container-apps"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Container Apps"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 19,
+    "totalIncidents": 28,
+    "totalEffort": 31,
+    "charts": {
+      "severity": {
+        "mandatory": 3,
+        "optional": 6,
+        "potential": 3,
+        "information": 16
+      },
+      "category": {
+        "framework-upgrade": 3,
+        "remote-communication": 6
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 19,
+      "storyPoints": 31,
+      "properties": {
+        "appName": "containerapps-albumapi-java",
+        "jdkVersion": "17",
+        "frameworks": [
+          "Spring Boot",
+          "Spring"
+        ],
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "bbefa0e2-55a4-48dd-bc08-822c958b4191",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-boot-to-azure-spring-boot-version-01000",
+          "incidentId": "377145cf-8f6d-4d31-8ef7-d62628cabe14",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 27,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "spring-framework-version-01000",
+          "incidentId": "b5208fbb-8e1f-476d-b493-e01c67089759",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "fdcc61eb-5055-49c5-bdf6-80aa67db43b0",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 18,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "00170c73-6a5e-46ca-8f4e-45c2ac459abd",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 19,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "33d8adc9-ef1f-461d-b416-a6a8e2fb41f2",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 20,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "372a425f-7f12-4784-983f-ee03a6840dd5",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 21,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "fed68d74-e460-4eec-acce-5af20112c9ae",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "5f97802c-cb60-4c1f-ae5d-ddb71702bdae",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "line": 23,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "c097c80a-08aa-457a-9e38-cc39c9d8de83",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/Album.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "c37cac83-8195-4cdc-9f8f-d35a680aad1c",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "c2eb4c41-efc6-456f-97f1-c37163b4efc7",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/ContainerappsAlbumapiJavaApplication.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "50fbcd16-c236-4940-b330-1275f4949102",
+          "location": "src/test/java/examples/azure/containerappsalbumapijava/ContainerappsAlbumapiJavaApplicationTests.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-maven-xml",
+          "incidentId": "5891965e-75e4-40a0-a270-76bd78c0ad6b",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-properties-file",
+          "incidentId": "2ad94226-2c01-4a2f-aab4-62c364afe55c",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-0200",
+          "incidentId": "3bce657a-699a-4f1d-8d70-2b9e417af7f9",
+          "location": "src/main/resources/application.properties",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "3rd-party-spring-03001",
+          "incidentId": "70220804-b7ea-4c5d-bf65-d6bce058394e",
+          "location": "src/main/java/examples/azure/containerappsalbumapijava/ContainerappsAlbumapiJavaApplication.java",
+          "locationKind": "File",
+          "line": 6,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "embedded-framework-08400",
+          "incidentId": "edca021a-2c9f-45b0-aa11-2d1587b7150e",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "mvc-01220",
+          "incidentId": "fb80decc-515d-4af4-ad07-69c6d01788c7",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-mvc-01200",
+          "incidentId": "51467699-e2bb-4862-85cf-10435a1d9674",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-0",
+          "incidentId": "ea4c57ef-cb0c-4e58-bf2d-80ae0e85fd99",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "embedded-framework-08200",
+          "incidentId": "c4bd2d25-c094-4b2a-a272-4b9e3d73b9d0",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 22,
+          "column": 0,
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "non-xml-technology-usage-20000",
+          "incidentId": "10252164-c0fc-4d38-98fb-abd9b31a2b75",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-embedded-framework-08200",
+          "incidentId": "ee7e1ab5-1028-47bb-8245-ca68647dd89f",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-embedded-framework-08400",
+          "incidentId": "e26ac417-89fd-42e9-a98a-9cedaf808018",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "configuration-management-technology-usage-0200",
+          "incidentId": "ad41a71c-5f00-492e-a757-d394fa60152b",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-1",
+          "incidentId": "89d9b65e-7c4f-4ecd-ae5e-12959314fe5c",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        },
+        {
+          "ruleId": "technology-usage-3rd-party-spring-03001-2",
+          "incidentId": "318b3915-e8e7-45e4-9c15-3f12ae9bcf78",
+          "location": "",
+          "locationKind": "",
+          "labels": [
+            "type=insight",
+            "ruleset=technology-usage"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "3rd-party-spring-03001": {
+      "id": "3rd-party-spring-03001",
+      "description": "",
+      "title": "Embedded framework - Spring Boot",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring Boot Configuration",
+        "tag=Spring Boot Auto-configuration",
+        "tag=Spring Boot Component Scan"
+      ]
+    },
+    "configuration-management-0200": {
+      "id": "configuration-management-0200",
+      "description": "Application properties file detected",
+      "title": "Application properties file detected",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Application Properties File",
+        "tag=Application properties file detected"
+      ]
+    },
+    "configuration-management-technology-usage-0200": {
+      "id": "configuration-management-technology-usage-0200",
+      "description": "",
+      "title": "Application Properties File",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Application Properties File",
+        "tag=Configuration Management=Application Properties File",
+        "tag=Embedded=Application Properties File"
+      ]
+    },
+    "discover-java-files": {
+      "id": "discover-java-files",
+      "description": "",
+      "title": "Java source files",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Java Source"
+      ]
+    },
+    "discover-maven-xml": {
+      "id": "discover-maven-xml",
+      "description": "",
+      "title": "Maven XML file",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Maven XML"
+      ]
+    },
+    "discover-properties-file": {
+      "id": "discover-properties-file",
+      "description": "",
+      "title": "Properties file",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Properties"
+      ]
+    },
+    "embedded-framework-08200": {
+      "id": "embedded-framework-08200",
+      "description": "The application embeds a Spring DI library.",
+      "title": "Embedded framework - Spring DI",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring DI",
+        "tag=Embedded framework - Spring DI"
+      ]
+    },
+    "embedded-framework-08400": {
+      "id": "embedded-framework-08400",
+      "description": "The application embeds the Spring Web framework.",
+      "title": "Embedded framework - Spring Web",
+      "severity": "potential",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring Web",
+        "tag=Embedded framework - Spring Web"
+      ]
+    },
+    "hardcoded-urls-00001": {
+      "id": "hardcoded-urls-00001",
+      "description": "This patterns verifies in source code and configuration files the presence of hardcoded URLs using the HTTP protocol (HTTP/HTTPS). This URL would need to be replaced by the new resource's URL during the Cloud migration, if any change occured.",
+      "title": "Avoid using hardcoded URLs (HTTP protocol) in source code",
+      "severity": "optional",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "source",
+        "domain=cloud-readiness",
+        "category=remote-communication",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "mvc-01220": {
+      "id": "mvc-01220",
+      "description": "",
+      "title": "Embedded framework - Spring MVC",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Spring MVC",
+        "tag=Embedded framework - Spring MVC"
+      ]
+    },
+    "non-xml-technology-usage-20000": {
+      "id": "non-xml-technology-usage-20000",
+      "description": "",
+      "title": "Properties",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Properties",
+        "tag=Embedded=Properties",
+        "tag=Other=Properties"
+      ]
+    },
+    "spring-boot-to-azure-spring-boot-version-01000": {
+      "id": "spring-boot-to-azure-spring-boot-version-01000",
+      "description": "The application is using the End of OSS Support of Spring Boot Version. \nWith the officially supported new versions from Spring, you can get the best experience. Here are some steps you can take to update your application to the latest version of Spring Boot:\n\n* Choose a **supported Spring Boot version**: Check out Spring Boot Support Versions, determine the most suitable supported Spring Boot version.\\n\\n\n\n* **Update Spring Boot version**: Update the Spring Boot version of your application. There are automated tools like Rewrite to help you with the migration.\n\n* **Address code compatibility**: Review your application's codebase for any potential compatibility issues with the target Spring Boot version. Update deprecated APIs or features, address any language or library changes, and ensure that your code follows best practices and standards.\n\n* **Test thoroughly**: Execute a comprehensive testing process to verify the compatibility and functionality of your application with the new Spring Boot version. Perform unit tests, integration tests, and system tests to validate that all components and dependencies work as expected.\"",
+      "title": "Spring Boot Version is End of OSS Support",
+      "severity": "mandatory",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps",
+          "title": "Migrate Spring Boot applications to Azure Container Apps"
+        },
+        {
+          "url": "https://learn.microsoft.com/azure/container-apps/java-microservice-get-started?tabs=azure-cli",
+          "title": "Launch your first Java microservice application with managed Java components in Azure Container Apps"
+        },
+        {
+          "url": "https://spring.io/projects/spring-boot/#support",
+          "title": "Spring Boot Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-boot/wiki/Supported-Versions",
+          "title": "Spring Boot Support Policy"
+        }
+      ],
+      "labels": [
+        "source=springboot",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "spring-framework-version-01000": {
+      "id": "spring-framework-version-01000",
+      "description": "Your application is using the Spring Framework version End of OSS Support. \nUpgrading to a supported version ensures better performance, security, and compatibility with modern tools.\n  1. Pick a Supported Version: Review the Spring Framework support policy and choose an actively supported version.\n  2. Update Your Project: Change the Spring Framework version in your pom.xml or build.gradle.\n  3. Fix Compatibility Issues: Update deprecated code, replace removed features, and ensure dependencies are compatible with the new Spring Framework version.\n  4. Thoroughly Test: Run unit, integration, and end-to-end tests to make sure everything still works after the upgrade.",
+      "title": "Spring Framework Version End of OSS Support",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://spring.io/projects/spring-framework#support",
+          "title": "Spring Framework Supported Versions"
+        },
+        {
+          "url": "https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions",
+          "title": "Spring Framework Support Policy"
+        }
+      ],
+      "labels": [
+        "source=spring",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-0": {
+      "id": "technology-usage-3rd-party-spring-03001-0",
+      "description": "",
+      "title": "Spring Boot Configuration",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Boot Configuration",
+        "tag=Embedded=Spring Boot Configuration",
+        "tag=Configuration Management=Spring Boot Configuration"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-1": {
+      "id": "technology-usage-3rd-party-spring-03001-1",
+      "description": "",
+      "title": "Spring Boot Auto-configuration",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Configuration Management=Spring Boot Auto-configuration",
+        "tag=Sustain=Spring Boot Auto-configuration",
+        "tag=Embedded=Spring Boot Auto-configuration"
+      ]
+    },
+    "technology-usage-3rd-party-spring-03001-2": {
+      "id": "technology-usage-3rd-party-spring-03001-2",
+      "description": "",
+      "title": "Spring Boot Component Scan",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Sustain=Spring Boot Component Scan",
+        "tag=Embedded=Spring Boot Component Scan",
+        "tag=Configuration Management=Spring Boot Component Scan"
+      ]
+    },
+    "technology-usage-embedded-framework-08200": {
+      "id": "technology-usage-embedded-framework-08200",
+      "description": "",
+      "title": "Spring DI",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=Embedded=Spring DI",
+        "tag=Inversion of Control=Spring DI",
+        "tag=Execute=Spring DI"
+      ]
+    },
+    "technology-usage-embedded-framework-08400": {
+      "id": "technology-usage-embedded-framework-08400",
+      "description": "",
+      "title": "Spring Web",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=View=Spring Web",
+        "tag=Web=Spring Web",
+        "tag=Embedded=Spring Web"
+      ]
+    },
+    "technology-usage-mvc-01200": {
+      "id": "technology-usage-mvc-01200",
+      "description": "",
+      "title": "Spring MVC",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "konveyor.io/include=always",
+        "discovery",
+        "tag=View=Spring MVC",
+        "tag=Embedded=Spring MVC",
+        "tag=MVC=Spring MVC"
+      ]
+    }
+  }
+}
