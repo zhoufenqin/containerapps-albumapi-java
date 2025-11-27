@@ -1,0 +1,147 @@
+# Azure Migration Assessment Report
+
+## Project Information
+
+- **Application Name**: containerapps-albumapi-java
+- **JDK Version**: 17
+- **Frameworks**: Spring Boot, Spring
+- **Languages**: Java
+- **Build Tool**: Maven
+
+## Assessment Targets
+
+This assessment was performed for migration to the following Azure services:
+- Azure Kubernetes Service (AKS)
+- Azure App Service
+- Azure Container Apps
+
+## Assessment Summary
+
+| Metric | Value |
+|--------|-------|
+| Total Projects | 1 |
+| Total Issues | 19 |
+| Total Incidents | 28 |
+| Total Story Points (Effort) | 31 |
+
+### Issues by Severity
+
+| Severity | Count |
+|----------|-------|
+| Mandatory | 3 |
+| Optional | 6 |
+| Potential | 3 |
+| Information | 16 |
+
+### Issues by Category
+
+| Category | Count |
+|----------|-------|
+| Framework Upgrade | 3 |
+| Remote Communication | 6 |
+
+## Mandatory Issues
+
+These issues must be addressed for successful migration:
+
+### 1. Spring Boot Version is End of OSS Support
+
+**Rule ID**: spring-boot-to-azure-spring-boot-version-01000  
+**Severity**: Mandatory  
+**Effort**: 5 story points  
+**Locations**: pom.xml (lines 22, 27)
+
+**Description**: The application is using an End of OSS Support version of Spring Boot (3.1.5).
+
+**Recommendations**:
+- Choose a supported Spring Boot version from [Spring Boot Support Versions](https://spring.io/projects/spring-boot/#support)
+- Update Spring Boot version using automated tools like Rewrite
+- Address code compatibility issues
+- Test thoroughly after the upgrade
+
+**Helpful Links**:
+- [Migrate Spring Boot applications to Azure Container Apps](https://learn.microsoft.com/azure/developer/java/migration/migrate-spring-boot-to-azure-container-apps)
+- [Launch your first Java microservice application with managed Java components in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/java-microservice-get-started?tabs=azure-cli)
+- [Spring Boot Support Policy](https://github.com/spring-projects/spring-boot/wiki/Supported-Versions)
+
+### 2. Spring Framework Version End of OSS Support
+
+**Rule ID**: spring-framework-version-01000  
+**Severity**: Mandatory  
+**Effort**: 3 story points  
+**Locations**: pom.xml (line 22)
+
+**Description**: Your application is using the Spring Framework version End of OSS Support (6.0.13).
+
+**Recommendations**:
+1. Pick a Supported Version: Review the Spring Framework support policy
+2. Update Your Project: Change the Spring Framework version in pom.xml
+3. Fix Compatibility Issues: Update deprecated code, replace removed features
+4. Thoroughly Test: Run unit, integration, and end-to-end tests
+
+**Helpful Links**:
+- [Spring Framework Supported Versions](https://spring.io/projects/spring-framework#support)
+- [Spring Framework Support Policy](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions)
+
+## Optional Issues
+
+These issues are recommended but not required for migration:
+
+### Hardcoded URLs (HTTP Protocol)
+
+**Rule ID**: hardcoded-urls-00001  
+**Severity**: Optional  
+**Effort**: 3 story points per occurrence  
+**Locations**: AlbumController.java (lines 18-23)
+
+**Description**: Hardcoded URLs using HTTP/HTTPS protocol detected. These URLs may need to be replaced with new resource URLs during cloud migration.
+
+**Affected URLs**:
+- https://aka.ms/albums-daprlogo (line 18)
+- https://aka.ms/albums-containerappslogo (line 19)
+- https://aka.ms/albums-kedalogo (line 20)
+- https://aka.ms/albums-envoylogo (line 21)
+- https://aka.ms/albums-vnetlogo (line 22)
+- https://aka.ms/albums-containerappslogo (line 23)
+
+**Recommendations**:
+- Consider externalizing these URLs to configuration
+- Use environment variables or Azure App Configuration for dynamic URL management
+
+## Technologies Detected
+
+### Embedded Frameworks
+- Spring Boot Configuration
+- Spring Boot Auto-configuration
+- Spring Boot Component Scan
+- Spring DI
+- Spring Web
+- Spring MVC
+
+### Configuration Management
+- Application Properties File
+
+### Build Tools
+- Maven
+
+## Files Analyzed
+
+- pom.xml
+- src/main/java/examples/azure/containerappsalbumapijava/Album.java
+- src/main/java/examples/azure/containerappsalbumapijava/AlbumController.java
+- src/main/java/examples/azure/containerappsalbumapijava/ContainerappsAlbumapiJavaApplication.java
+- src/test/java/examples/azure/containerappsalbumapijava/ContainerappsAlbumapiJavaApplicationTests.java
+- src/main/resources/application.properties
+
+## Next Steps
+
+1. **Update Spring Boot Version**: Upgrade to a supported Spring Boot version (e.g., 3.2.x or later)
+2. **Update Spring Framework**: The Spring Framework version will be updated automatically with Spring Boot upgrade
+3. **Review Hardcoded URLs**: Consider externalizing URLs to configuration files or environment variables
+4. **Test Application**: Run comprehensive tests after making changes
+5. **Deploy to Azure**: Follow Azure Container Apps deployment guidelines
+
+---
+
+*Generated by AppCAT CLI Assessment Tool*  
+*Assessment Date: 2025-11-26*
